@@ -1,0 +1,97 @@
+/**
+ * Provides an unstyled baseline for all elements so that it is easier to reason
+ * about the effects of downstream CSS development.
+ */
+
+*,
+*:after,
+*:before {
+   /* Preserves dimensions of elements, regardless of padding or border. */
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+
+   /* Resets all the things. */
+   background: transparent;
+   border: 0;
+   font: inherit;
+   font-size: 100%;
+   margin: 0;
+   padding: 0;
+   vertical-align: baseline;
+}
+
+*:after,
+*:before {
+   content: none;
+}
+
+address,
+article,
+aside,
+body,
+blockquote,
+canvas,
+dd,
+details,
+dialog,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+legend,
+li,
+main,
+menu,
+nav,
+noscript,
+ol,
+p,
+pre,
+section,
+summary,
+ul {
+   /* Forces block display for known block-level elements. */
+   display: block;
+}
+
+button,
+input,
+keygen,
+meter,
+progress,
+select,
+textarea, {
+   /* Forces inline-block display for known inline-block elements. */
+   display: inline-block;
+}
+
+html {
+   /* Prevents text size from changing after a device orientation change. */
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+ol,
+ul {
+   list-style: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
