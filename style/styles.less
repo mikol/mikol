@@ -2,6 +2,7 @@ body,
 html {
   font-family: Roboto;
   font-size: 12px;
+  letter-spacing: 0.50px;
 }
 
 .hresume {
@@ -27,6 +28,14 @@ header.vcard::before {
   z-index: 1;
 }
 
+header.vcard > .fn,
+header.vcard > .role {
+  color: #fff;
+  margin-left: 60px;
+  position: relative;
+  z-index: 2;
+}
+
 header.vcard > .fn {
   color: #fff;
   font-family: "Roboto Condensed";
@@ -35,13 +44,29 @@ header.vcard > .fn {
   font-weight: 300;
   letter-spacing: 0.97px;
   line-height: 35px;
+  margin-left: 59px;
+  margin-top: 32px;
   text-transform: lowercase;
 }
 
-header.vcard > .fn,
-header.vcard > .role {
-  color: #fff;
-  margin-left: 60px;
-  position: relative;
-  z-index: 2;
+/* Pronunciation ------------------------------------------------------------ */
+
+.AHD.enPR {
+  color: #000;
+  opacity: 0.13;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: -0.70px;
+  position: absolute;
+  right: 42px;
+  top: 14px;
 }
+
+.stress-primary {
+  font-style: italic;
+  font-weight: 700;
+  margin-right: 0.125em;
+}
+
+/* -------------------------------------------------------------------------- */
