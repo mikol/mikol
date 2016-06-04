@@ -118,16 +118,20 @@ p {
 
 html {
   background-attachment: fixed;
-  background-color: #af7837;
-  background-image: url(/img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  opacity: 0;
+  transition: 1.5s ease-in-out;
 
   @media print {
     background-color: transparent;
     background-image: none;
   }
+}
+
+html.ready {
+  opacity: 1;
 }
 
 .hresume {
@@ -141,7 +145,7 @@ html {
   position: relative;
 
   &:before {
-    background-color: #ef841f;
+    background-color: rgba(80, 144, 159, 0.93);
     border-top-left-radius: 52px;
     content: "";
     height: 100%;
@@ -157,7 +161,7 @@ html {
   }
 
   &:after {
-    background-color: #ede6dd;
+    background-color: rgba(236, 238, 238, 0.93);
     border-top-right-radius: 52px;
     content: "";
     height: 100%;
@@ -180,7 +184,7 @@ html {
 }
 
 header.vcard {
-  background-color: #746458; /* Anti-aliases border-radius. */
+  background-color: #e77408; /* Anti-aliases border-radius. */
   height: 104px;
   overflow: hidden;
   position: relative;
@@ -195,6 +199,7 @@ header.vcard {
     bottom: 0;
     content: "";
     left: 0;
+    opacity: 0.87;
     position: absolute;
     right: 0;
     top: 0;
@@ -207,7 +212,7 @@ header.vcard {
 
   /* Color background image. */
   &:after {
-    background-color: #746458;
+    background-color: #e77408;
     bottom: 0;
     content: "";
     left: 0;
@@ -248,14 +253,15 @@ header.vcard {
 
     /* Pronunciation -------------------------------------------------------- */
     & > .AHD.enPR {
-      color: rgba(0, 0, 0, 0.13);
+      color: rgba(0, 0, 0, 0.07);
+      font-family: Arial, "Liberation Sans", sans-serif;
+      font-size: 40px;
       font-variant: normal;
       font-weight: 400;
-      font-size: 48px;
       letter-spacing: -0.70px;
       position: absolute;
       right: 42px;
-      top: 2px;
+      top: 8px;
 
       @media print {
         display: none;

@@ -10,6 +10,10 @@
 
    maybe();
 })(function main() {
+  setTimeout(function loadBackgroundImage() {
+    document.documentElement.className = 'ready';
+  });
+
   (function updateContactInformation() {
     var element = _getElementsByClassName.call(document, 'tel')[0];
 
@@ -27,7 +31,7 @@
       element.setAttribute('href', 'mailto:mikol@thinbox.org');
       _textContent(element, 'mikol@thinbox.org');
     }
-  })();
+  }());
 });
 
 /* XXX ---------------------------------------------------------------------- */
